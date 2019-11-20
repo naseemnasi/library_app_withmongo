@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body class="body">
+
+        
+    <!-- <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color: rgb(16, 1, 100);">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.htm">HOME</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/login.htm">LOGIN</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="signup.htm">SIGN UP</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="#">ABOUT</a>
+                </li>
+            </ul>
+    </nav> -->
+    <div class="navbar navbar-dark bg-dark">
+            <%for(var i=0;i<nav.length;i++){%>
+                 <ul class="navbar-nav">
+                     <li class="nav-item"><a href="<%=nav[i].link%>"><%=nav[i].title%></a></li>
+                 </ul>
+            <%}%>
+        </div>
+     <div class="jumbotron jumbotron-fluid" style="background-color: rgb(1, 1, 43);" >
+         <div class="container text-light">
+             <h1><em><%=title%></em></h1> 
+             <div class="jumpotrone jumbotron-fluid" style="margin-left:600px;background-color:rgb(16, 1, 100);height:100px;margin-top:-50px;margin-right:-20px">
+                 <label for="text" class="text-light"></label>
+             </div>
+         </div>
+     </div>
+ 
+     <div class="jumbotron" style="border-radius: 0%; margin-top:-80px;margin-right:100px;margin-left:100px;background-color: white;">
+             <div class="container">
+                 <div class="media">
+                     <img src="/image/billgates.jpg.jpg" class="align-self-start mr-3 rounded-circle" style="width:100px;height: 100px;">
+                     <div class="media-body">
+                       <h4 class="text-muted">Repurpose content to reach a wider audience</h4>
+                       <button type="button" class="btn btn-secondary">97thfloor.com</button>
+                       <br>
+                       <label class="text-muted">2 hours ago.</label>
+                       <label class="text-muted"><a href="#">Read more</a></label>
+                     </div>
+                   </div>
+               <div>
+                 <br>
+                 <br>
+                 <br>
+               </div>
+             <div class="media">
+                 <img src="/image/stevejobs.jpg.jpg" alt="steve jobs" class="align-self-start mr-3 rounded-circle" style="width:100px;height: 100px;">
+                 <div class="media-body">
+                     <h4 class="text-muted">14 Useful sites for designers</h4>
+                     <button type="button" class="btn btn-secondary">apple.com</button>
+                     <br>
+                     <label class="text-muted">3 hours ago.</label>
+                     <label class="text-muted"><a href="#">Read more</a></label>
+                   </div>
+               </div>
+             </div>
+           </div>
+
+</body>
+</html>

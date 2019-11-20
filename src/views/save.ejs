@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body class="body">
+
+        
+    <!-- <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color: rgb(16, 1, 100);">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.htm">HOME</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/login.htm">LOGIN</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="signup.htm">SIGN UP</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="#">ABOUT</a>
+                </li>
+            </ul>
+    </nav> -->
+    <div class="navbar navbar-dark bg-dark">
+            <%for(var i=0;i<nav.length;i++){%>
+                 <ul class="navbar-nav">
+                     <li class="nav-item"><a href="<%=nav[i].link%>"><%=nav[i].title%></a></li>
+                 </ul>
+            <%}%>
+        </div>
+    <div class="jumbotron jumbotron-fluid" style="background-color: rgb(1, 1, 43);" >
+        <div class="container text-light">
+            <h1><em><%=title%></em></h1> 
+            <div class="jumpotrone jumbotron-fluid" style="margin-left:600px;background-color:rgb(16, 1, 100);height:100px;margin-top:-50px;margin-right:-20px">
+                <label for="text" class="text-light"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron" style="border-radius: 0%; margin-top:-80px;margin-right:100px;margin-left:100px;background-color: white;">
+            <div class="container">
+                <table class="table table-striped">
+                    <tr><th>IMAGE</th>
+                    <th>DESCRIPTION</th></tr>
+                    <%for(var i=0;i<books.length;i++){%>
+                        <tr><td><img src="/image/<%=books[i].img%>" class="align-self-start mr-3 rounded-circle" style="height:80px  "></td>
+                        
+                        <td><h5><%=books[i].title%></h5>
+                        <h6><%=books[i].genre%></h6>
+                        <h6><%=books[i].aouther%></h6>
+                        <a href="/books/<%=i%>">Read more</a></td>
+                        </tr>   
+                    <%}%>
+                  </table>
+                
+            </div>
+          </div>
+
+</body>
+</html>
